@@ -1,0 +1,113 @@
+@charset "UTF-8";
+
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+    background-color: lightgray;
+}
+
+.cabecalho {
+    background-color: #333;
+    border-bottom: solid 1px #4faddb;
+    height: 80px;
+    box-sizing: content-box; /*borda azul do lado de fora do menu*/
+}
+
+.logo {
+    display: inline-block;
+    height: 80px;
+    padding: 15px;
+}
+
+.logo img {  /*logo img(filho) ocupando 100% do espaço do logo pai */
+    height: 100%;
+}
+
+.menu-toggle { /*Flutuar o menu para o lado direito*/
+    float: right;
+    color: #eee;
+    background-color: #555;
+    border: solid 1px #777;
+    border-radius: 5px;
+    height: 40px;
+    padding: 10px 20px;
+    margin: 20px 15px;
+
+
+}
+
+.menu {
+    display: inline-block;
+    vertical-align: top;
+    height: 80px;
+    padding: 25px;
+}
+
+.menu ul {
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    display: inline-block;
+    color: #eee; /* separador do menu*/
+
+}
+
+.cabecalho a {
+    text-decoration: none;
+    color: #eee;
+    font-size: 1.3em;
+
+}
+
+.menu a {
+    padding: 15px;
+
+}
+
+
+
+.autenticacao {/*Flutuar o Registrar para o lado direito*/
+    float: right;
+    height: 80px;
+    padding:25px;
+
+}
+
+.menu a:hover, .menu a.selected { /*selected via javascript*/
+    background-color: #4faddb
+
+}
+
+.botao {
+    border-radius: 30px;
+    padding: 4px 15px;
+    margin: 10px;
+    background: rgb(37, 131, 218);
+
+}
+
+@media (min-width: 685px) { /* Se display for menor que 685px ocultar menu-toggle */
+    .menu-toggle {
+        display: none;
+    }
+}
+
+@media (max-width: 685px) { /* Se display for maior que 685px revelar menu */
+    .menu {
+        display: none;
+    }
+}
+
+@media (max-width: 910px){
+    .autenticacao {
+        display: none;
+    }
+}
+
